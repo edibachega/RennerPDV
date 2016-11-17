@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/produtos.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -41,7 +42,7 @@
         
         <div class="col-sm-12 col-md-12 main">
           <h1 class="page-header">Produtos
-            <button class="btn btn-success pull-right" type="submit" >
+            <button class="btn btn-success pull-right" data-toggle="modal" data-target="#cadastro-produto" type="button" >
                 <span class="glyphicon glyphicon-plus"></span>
                 Cadastrar</button>
           </h1>
@@ -70,6 +71,78 @@
         </div>
       </div>
     </div>
+    <div id="cadastro-produto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Cadastrar Novo Produto</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="codigo">Código</label>  
+                                <div class="col-md-4">
+                                    <input id="codigo" name="codigo" type="text" placeholder="" class="form-control input-md">
 
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="nome">Nome</label>  
+                                <div class="col-md-4">
+                                    <input id="nome" name="nome" type="text" placeholder="" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Select Basic -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="marca">Marca</label>
+                                <div class="col-md-4">
+                                    <select id="marca" name="marca" class="form-control">
+                                        <option value="0">-- Selecione --</option>
+                                        <option value="Levis">Levis</option>
+                                        <option value="Hering">Hering</option>
+                                        <option value="Nike">Nike</option>
+                                        <option value="Adidas">Adidas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Prepended text-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="preco">Preço Unitário</label>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">R$</span>
+                                        <input id="preco" name="preco" class="form-control" placeholder="" type="text">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="quantidade">Quantidade</label>  
+                                <div class="col-md-4">
+                                    <input id="quantidade" name="quantidade" type="text" placeholder="" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
   </body>
 </html>
