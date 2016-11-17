@@ -1,0 +1,19 @@
+[{
+    "codigo": "123456",
+    "nome": "Camiseta",
+    "marca": "Renner",
+    "preco": 24.70,
+    "quantidade": 6
+},{
+    "codigo": "90876",
+    "nome": "Calça",
+    "marca": "Levis",
+    "preco": 108.99,
+    "quantidade": 45
+},{
+    "codigo": "43215",
+    "nome": "Blusa",
+    "marca": "Nike",
+    "preco": 399.99,
+    "quantidade": 23
+}]

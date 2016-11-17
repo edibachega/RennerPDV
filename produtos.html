@@ -36,40 +36,32 @@
         </div>
       </div>
     </nav>
-
     <div class="container-fluid">
-      <div class="row">
-        
-        <div class="col-sm-12 col-md-12 main">
-          <h1 class="page-header">Produtos
-            <button class="btn btn-success pull-right" data-toggle="modal" data-target="#cadastro-produto" type="button" >
-                <span class="glyphicon glyphicon-plus"></span>
-                Cadastrar</button>
-          </h1>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Código</th>
-                  <th>Nome</th>
-                  <th>Marca</th>
-                  <th>Preço</th>
-                  <th>Quantidade</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>123456</td>
-                  <td>Camiseta</td>
-                  <td>Renner</td>
-                  <td>24,70</td>
-                  <td>6</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 main">          
+            <h1 class="page-header">Produtos
+                <button class="btn btn-success pull-right" data-toggle="modal" data-target="#cadastro-produto" type="button" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Cadastrar</button>
+            </h1>
+            <div class="table-responsive">
+                <table id="lista-produtos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Marca</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
+    </div>
     </div>
     <div id="cadastro-produto" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
         <div class="modal-dialog" role="document">
@@ -119,7 +111,7 @@
                                 <div class="col-md-4">
                                     <div class="input-group">
                                         <span class="input-group-addon">R$</span>
-                                        <input id="preco" name="preco" class="form-control" placeholder="" type="text">
+                                        <input id="valor" name="valor" class="form-control" placeholder="" type="text">
                                     </div>
 
                                 </div>
@@ -138,8 +130,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Fechar</button>
+                    <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Salvar</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
