@@ -77,7 +77,7 @@
                 <h4 class="modal-title" id="gridSystemModalLabel">Cadastrar Novo Produto</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
+                    <form id="form-produto" action="/model/cadastro.php" method="POST" class="form-horizontal">
                         <fieldset>
                             <!-- Text input-->
                             <div class="form-group">
@@ -137,7 +137,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Fechar</button>
-                    <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Salvar</button>
+                    <button type="button" id="bt-cadastrar" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Cadastrar</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

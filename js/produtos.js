@@ -1,9 +1,9 @@
 $('document').ready(function () {
-    $.getJSON('/model/produtos.json',function (retorno) {
+    $.getJSON('/model/produtos.php',function (retorno) {
         $('#lista-produtos tbody').empty();
         var total = 0;
         retorno.forEach(function (obj, idx){
-            total += obj.quantidade;
+            total += parseInt(obj.quantidade);
             var tr = "<tr>"
                         +"<td>"+ obj.codigo +"</td>"
                         +"<td>"+ obj.nome +"</td>"
@@ -25,6 +25,9 @@ $('document').ready(function () {
         } else {
             return false;
         }
+    });
+    $('#bt-cadastrar').click(function(){
+       $('#form-produto').submit(); 
     });
 });
 
