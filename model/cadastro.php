@@ -1,6 +1,19 @@
 <?php
 
-$sql = "insert into produtos (codigo, nome, marca, preco, quantidade) 
-        VALUES ('".$_POST['codigo']."','".$_POST['nome']."','".$_POST['marca']."','".$_POST['valor']."','".$_POST['quantidade']."')";
+    $db = new PDO('mysql:host=localhost;dbname=renner_pdv;charset=UTF8','root','elaborata');
 
-echo $sql;
+    $sql = "insert into produtos (codigo, nome, marca, preco, quantidade) 
+            VALUES ('".$_POST['codigo']."','".$_POST['nome']."','".$_POST['marca']."','".$_POST['valor']."','".$_POST['quantidade']."')";
+
+    //echo $sql;
+
+    $retorno = $db->exec($sql);
+    
+    if($retorno > 0 ){
+        $status['status'] = 'ok'; 
+    }else {
+        $status['status'] = 'erro';
+        $status['msg'] = 'não foi cadastrado';
+    }
+    
+    echo json_encode($status);
